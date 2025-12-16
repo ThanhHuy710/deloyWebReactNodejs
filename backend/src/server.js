@@ -7,11 +7,15 @@ import cors from "cors"; // Cho phép truy cập từ domain khác (Cross-Origin
 
 dotenv.config();
 
+
 const PORT = process.env.PORT || 5001;
 const app = express();
 
 app.use(express.json()); 
-
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://deloywebreactnodejsfrontend.onrender.com"
+];
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -23,7 +27,9 @@ app.use(cors({
   credentials: true
 }));
 
-
+app.get("/", (req, res) => {
+  res.json({ status: "Backend is running" });
+});
 app.use("/api/tasks", taskRoute); 
 
 connectDB().then(() => {
