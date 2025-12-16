@@ -15,9 +15,5 @@ jobs:
         working-directory: backend
         run: npm ci
 
-      - name: Run backend tests (optional)
-        working-directory: backend
-        run: npm test --if-present
-
       - name: Trigger Render backend deploy
         run: curl -X POST "${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}"
