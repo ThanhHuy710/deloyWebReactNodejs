@@ -28,7 +28,7 @@ app.use(cors({
 }));
 
 app.get("/", (req, res) => {
-  res.json({ status: "Backend is running" });
+  res.json({ status: "Backend is running ok!!!" });
 });
 app.use("/api/tasks", taskRoute); 
 
