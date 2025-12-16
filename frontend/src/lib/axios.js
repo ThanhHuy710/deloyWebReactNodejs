@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api =axios.create({
-    baseURL:"https://deloywebreactnodejs.onrender.com/",
+    baseURL:"https://deloywebreactnodejs.onrender.com",
 })
 
 export default api;
