@@ -3,7 +3,7 @@ export default function Header() {
     <>
       <div className="space-y-2 text-center ">
           <h1 className="text-4xl font-bold text-transparent bg-primary bg-clip-text">todoX</h1>
-          <p>Võ Thanh Huy</p>
+          <p>Võ Thanh Huy - Thứ 4 ca 2</p>
           <p>quản lý tasks đơn giản hơn</p>
       </div>
     </>
